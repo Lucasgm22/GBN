@@ -27,7 +27,7 @@ public class Client {
 
         String info = new String(rcvPkt.getData(), rcvPkt.getOffset(), rcvPkt.getLength());
 
-        System.out.println("recevido do servidor: " + info);
+        System.out.println("recebido do servidor: " + info);
 
         clientSocket.close();
     }

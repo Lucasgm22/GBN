@@ -11,13 +11,13 @@ public class Server {
         DatagramSocket serverSocket = new DatagramSocket(9876);
 
         while (true) {
-
+            System.out.println("Esperando mensagem");
             byte[] rcvBuffer = new byte[1024];
             DatagramPacket rcvPkt = new DatagramPacket(rcvBuffer, rcvBuffer.length);
             serverSocket.receive(rcvPkt);
             String info = new String(rcvPkt.getData(), rcvPkt.getOffset(), rcvPkt.getLength());
 
-            System.out.println("recevido do cliente: " + info);
+            System.out.println("recebido do cliente: " + info);
 
             byte[] sendData = new byte[1024];
             sendData = "sou o servidor".getBytes();
