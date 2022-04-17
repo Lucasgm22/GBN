@@ -18,7 +18,7 @@ public class Client {
         DatagramPacket sendPkt = new DatagramPacket(sendData, sendData.length, IPAdress, 9876);
 
         clientSocket.send(sendPkt);
-
+        System.out.println("mensagem enviada");
 
 
         byte[] rcvBuffer = new byte[1024];
@@ -27,7 +27,7 @@ public class Client {
 
         String info = new String(rcvPkt.getData(), rcvPkt.getOffset(), rcvPkt.getLength());
 
-        System.out.println(info);
+        System.out.println("recevido do servidor: " + info);
 
         clientSocket.close();
     }
