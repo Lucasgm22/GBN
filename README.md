@@ -1,2 +1,2 @@
 # GBN
-implementation fo Go-Back-N
+implementation of Go-Back-N
